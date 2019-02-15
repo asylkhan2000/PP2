@@ -1,0 +1,6 @@
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\bin\Debug\task4.exe.config
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\bin\Debug\task4.exe
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\bin\Debug\task4.pdb
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\obj\Debug\task4.csproj.CoreCompileInputs.cache
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\obj\Debug\task4.exe
+C:\Users\FORA-TRADE\Desktop\PP2\week1\task4\task4\obj\Debug\task4.pdb
