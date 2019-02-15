@@ -9,32 +9,32 @@ namespace task3
 {
     class Program
     {
-        static void spaces(int level)
+        static void space(int level)//создаем функцию, которая создает отступы в иерархии папок
         {
             for (int i = 0; i < level; i++)
                 Console.Write("  ");
         }
-        static void Task3(DirectoryInfo directory, int level)
+        static void hierarchy(DirectoryInfo directory, int level)
         {
 
-            FileInfo[] files = directory.GetFiles();
-            DirectoryInfo[] directories = directory.GetDirectories();
+            FileInfo[] files = directory.GetFiles();//сохраняем информацию о файлах в папке
+            DirectoryInfo[] directories = directory.GetDirectories();//сохраняем информацию о папках в папке
             foreach (FileInfo file in files)
             {
-                spaces(level);
-                Console.WriteLine(file.Name);
+                space(level);//отправляем уровнь иерархии в функцию для отступа
+                Console.WriteLine(file.Name);//вывод названия файла
             }
             foreach (DirectoryInfo dir in directories)
             {
-                spaces(level);
-                Console.WriteLine(dir.Name);
-                Task3(dir, level + 1);
+                space(level);//отправляем уровень иерархии в функцию для отступа
+                Console.WriteLine(dir.Name);//вывод названия файла
+                hierarchy(dir, level + 1);//рекурсивно обращаемся к той же функции, увеличивая уровень иерархии
             }
         }
         static void Main(string[] args)
         {
-            DirectoryInfo directory = new DirectoryInfo(@"C:\Users\FORA-TRADE\Desktop\PP2");
-            Task3(directory, 0);
+            DirectoryInfo directory = new DirectoryInfo(@"C:\Users\FORA-TRADE\Desktop\PP2");//сохраняем информацию о папке
+            hierarchy(directory, 0);//отправляем информацию о папке в функцию
             Console.ReadKey();
         }
     }
